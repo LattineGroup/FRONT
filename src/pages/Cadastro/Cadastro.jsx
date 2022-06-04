@@ -18,7 +18,7 @@ export default function Cadastro() {
     const [dataCadastro, setDataCadastro] = useState(new Date());
 
     function BuscarUsuarios() {
-        axios("http://localhost:5000/api/usuarios", {
+        axios("https://back-door.azurewebsites.net/api/Usuarios", {
             headers: { 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login') }
         })
             .then(resposta => {
@@ -30,7 +30,7 @@ export default function Cadastro() {
     useEffect(BuscarUsuarios, []);
 
     function CadastrarUsuario(usuario) {
-        axios.post("http://localhost:5000/api/usuarios", {
+        axios.post("https://back-door.azurewebsites.net/api/Usuarios", {
             idTipoUsuario: "2",
             nome: nome,
             sobrenome: sobrenome,
