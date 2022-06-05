@@ -18,7 +18,7 @@ export default function DadosServicos() {
     const { id } = useParams();
 
     function buscarMaquinasUsuario() {
-        axios('http://localhost:5000/api/MaquinaVirtuals/user/'+id, {
+        axios('https://door-back.azurewebsites.net/api/MaquinaVirtuals/user/'+id, {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -33,7 +33,7 @@ export default function DadosServicos() {
     useEffect(buscarMaquinasUsuario, []);
 
     function buscarRedesUsuario() {
-        axios('http://localhost:5000/api/RedeVirtuals/user/'+id, {
+        axios('https://door-back.azurewebsites.net/api/RedeVirtuals/user/'+id, {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -48,7 +48,7 @@ export default function DadosServicos() {
     useEffect(buscarRedesUsuario, []);
 
     function buscarServicosUsuario() {
-        axios('http://localhost:5000/api/Servicoaplicacionals/user/'+id, {
+        axios('https://door-back.azurewebsites.net/api/Servicoaplicacionals/user/'+id, {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -63,7 +63,7 @@ export default function DadosServicos() {
     useEffect(buscarServicosUsuario, []);
 
     function buscarDadosUsuario() {
-        axios('http://localhost:5000/api/usuarios/um/'+id, {
+        axios('https://door-back.azurewebsites.net/api/usuarios/um/'+id, {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
