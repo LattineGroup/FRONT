@@ -22,7 +22,7 @@ export default function DadosMaquinaVirtual() {
     }
 
     function buscarMinhasMaquinas() {
-        axios('http://localhost:5000/api/MaquinaVirtuals/minhas', {
+        axios('https://door-back.azurewebsites.net/api/MaquinaVirtuals', {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -37,7 +37,7 @@ export default function DadosMaquinaVirtual() {
     useEffect(buscarMinhasMaquinas, []);
 
     function buscarMeusDados() {
-        axios('http://localhost:5000/api/usuarios/meus', {
+        axios('https://door-back.azurewebsites.net/api/MaquinaVirtuals', {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
