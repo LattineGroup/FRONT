@@ -22,7 +22,7 @@ export default class EditarDadosUsuario extends Component {
     }
 
     buscarMeusDados = () => {
-        axios('http://localhost:5000/api/usuarios/um/', {
+        axios('https://door-back.azurewebsites.net/api/usuarios/um/', {
             headers: {
                 Authorization: 'Bearer ' + localStorage.getItem('usuario-login'),
             }
