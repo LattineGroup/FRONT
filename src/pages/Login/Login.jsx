@@ -24,7 +24,7 @@ export default class Login extends Component {
         event.preventDefault();
 
         this.setState({ erroMensagem: '', isLoading: true });
-        axios.post('https://door-back-lattine.azurewebsites.net/api/Login/Login'), {
+        axios.post('https://door-back.azurewebsites.net/index.html'), {
             email: this.state.email,
             senha: this.state.senha
         })
