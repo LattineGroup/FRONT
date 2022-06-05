@@ -9,7 +9,7 @@ export default function Usuarios() {
     const [listaUsuarios, setListaUsuarios] = useState([]);
 
     function buscarUsuarios() {
-        axios('https://back-door.azurewebsites.net/api/Usuarios', {
+        axios('https://door-back.azurewebsites.net/index.html', {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
