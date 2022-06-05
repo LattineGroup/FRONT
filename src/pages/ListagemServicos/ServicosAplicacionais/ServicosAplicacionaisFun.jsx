@@ -10,7 +10,7 @@ export default function ServicosAplicacionais() {
     const [dataCadastro, setDataCadastro] = useState("");
 
     function buscarServicos() {
-        axios('http://localhost:5000/api/ServicoAplicacionals', {
+        axios('https://door-back.azurewebsites.net/api/ServicoAplicacionals', {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
