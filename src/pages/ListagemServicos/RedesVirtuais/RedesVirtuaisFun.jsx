@@ -10,7 +10,7 @@ export default function RedesVirtuais() {
     const [dataCadastro, setDataCadastro] = useState("");
 
     function buscarRedes() {
-        axios('http://localhost:5000/api/redevirtuals', {
+        axios('https://door-back.azurewebsites.net/api/redevirtuals', {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
