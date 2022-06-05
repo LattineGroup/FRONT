@@ -22,7 +22,7 @@ export default function DadosServicoAplicacional() {
     }
 
     function buscarMeusServicos() {
-        axios('http://localhost:5000/api/ServicoAplicacionals/meus', {
+        axios('https://door-back.azurewebsites.net/api/ServicoAplicacionals/meus', {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -37,7 +37,7 @@ export default function DadosServicoAplicacional() {
     useEffect(buscarMeusServicos, []);
 
     function buscarMeusDados() {
-        axios('http://localhost:5000/api/usuarios/meus', {
+        axios('https://door-back.azurewebsites.net/api/usuarios/meus', {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
