@@ -21,7 +21,7 @@ export default class CadastroSubRedeCli extends Component {
     }
 
     buscarSubRedes = () => {
-        axios('http://localhost:5000/api/subredes')
+        axios('https://back-door.azurewebsites.net/api/subredes')
             .then((resposta) => {
                 if (resposta.status === 200) {
                     this.setState({ listaSubRedes: resposta.data });
@@ -52,7 +52,7 @@ export default class CadastroSubRedeCli extends Component {
         };
 
         axios
-            .post('http://localhost:5000/api/subredes', subrede, {
+            .post('https://back-door.azurewebsites.net/api/subredes', subrede, {
                 headers: {
                     Authorization: 'Bearer ' + localStorage.getItem('usuario-login'),
                 },
