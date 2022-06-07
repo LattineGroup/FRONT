@@ -39,7 +39,7 @@ export default class CadastroRedeVirtualCli extends Component {
     }
 
     buscarSubRedes = () => {
-        axios('http://localhost:5000/api/subredes/minhas', {
+        axios('https://back-door.azurewebsites.net/api/subredes/minhas', {
             headers: {
                 Authorization: 'Bearer ' + localStorage.getItem('usuario-login'),
             },
@@ -54,7 +54,7 @@ export default class CadastroRedeVirtualCli extends Component {
     };
 
     buscarIps = () => {
-        axios('http://localhost:5000/api/enderecoips/meus', {
+        axios('https://back-door.azurewebsites.net/api/enderecoips/meus', {
             headers: {
                 Authorization: 'Bearer ' + localStorage.getItem('usuario-login'),
             },
@@ -69,7 +69,7 @@ export default class CadastroRedeVirtualCli extends Component {
     };
 
     buscarRedesVirtuais = () => {
-        axios('http://localhost:5000/api/redevirtuals')
+        axios('https://back-door.azurewebsites.net/api/redevirtuals')
             .then((resposta) => {
                 if (resposta.status === 200) {
                     this.setState({ listaredes: resposta.data });
@@ -107,7 +107,7 @@ export default class CadastroRedeVirtualCli extends Component {
         };
 
         axios
-            .post('http://localhost:5000/api/redevirtuals', rede, {
+            .post('https://back-door.azurewebsites.net/api/redevirtuals', rede, {
                 headers: {
                     Authorization: 'Bearer ' + localStorage.getItem('usuario-login'),
                 },
