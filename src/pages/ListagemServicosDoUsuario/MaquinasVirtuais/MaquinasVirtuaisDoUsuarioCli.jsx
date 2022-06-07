@@ -22,7 +22,7 @@ export default function DadosMaquinaVirtual() {
     }
 
     function buscarMinhasMaquinas() {
-        axios('https://door-back.azurewebsites.net/api/MaquinaVirtuals', {
+        axios('https://back-door.azurewebsites.net/api/MaquinaVirtuals', {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
