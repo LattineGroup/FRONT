@@ -63,7 +63,7 @@ export default function DadosServicos() {
     useEffect(buscarServicosUsuario, []);
 
     function buscarDadosUsuario() {
-        axios('https://door-back.azurewebsites.net/api/usuarios/um/'+id, {
+        axios('https://back-door.azurewebsites.net/api/usuarios/um/'+id, {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
