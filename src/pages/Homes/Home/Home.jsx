@@ -43,7 +43,7 @@ export default function Home() {
 
                         <nav className="menuButton">
                             <button onClick={() => setActive("PrimeiroCard")} className="botaoCard1"> Máquinas Virtuais </button>
-                            <button onClick={() => setActive("SegundoCard")} className="botaoCard2"> Serviços Aplicacionais</button>
+                            <button onClick={() => setActive("SegundoCard")} className="botaoCard2"> Serviço de Aplicativo</button>
                             <button onClick={() => setActive("TerceiroCard")} className="botaoCard3"> Redes Virtuais</button>
                         </nav>
 
