@@ -9,7 +9,7 @@ export default function DadosRede() {
     const { id } = useParams();
 
     function buscarMeusDados() {
-        axios('http://localhost:5000/api/RedeVirtuals/uma/' + id, {
+        axios('https://back-door.azurewebsites.net/api/RedeVirtuals/uma/' + id, {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
