@@ -26,7 +26,7 @@ export default class CadastroMaqVirCli extends Component {
     }
 
     buscarMaquinasVirtuais = () => {
-        axios('http://localhost:5000/api/maquinavirtuals')
+        axios('https://back-door.azurewebsites.net/api/maquinavirtuals')
             .then((resposta) => {
                 if (resposta.status === 200) {
                     this.setState({ listaMaquinas: resposta.data });
@@ -62,7 +62,7 @@ export default class CadastroMaqVirCli extends Component {
         };
 
         axios
-            .post('http://localhost:5000/api/maquinavirtuals', maquina, {
+            .post('https://back-door.azurewebsites.net/api/maquinavirtuals', maquina, {
                 headers: {
                     Authorization: 'Bearer ' + localStorage.getItem('usuario-login'),
                 },
