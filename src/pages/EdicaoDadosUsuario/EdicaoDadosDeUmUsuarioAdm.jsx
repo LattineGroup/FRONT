@@ -22,7 +22,7 @@ export default class EditarDadosUsuario extends Component {
     }
 
     buscarMeusDados = () => {
-        axios('https://door-back.azurewebsites.net/api/usuarios/um/', {
+        axios('https://back-door.azurewebsites.net/api/usuarios/um/', {
             headers: {
                 Authorization: 'Bearer ' + localStorage.getItem('usuario-login'),
             }
@@ -37,7 +37,7 @@ export default class EditarDadosUsuario extends Component {
     };
 
     buscarUsuarios = () => {
-        axios('http://localhost:5000/api/usuarios')
+        axios('https://back-door.azurewebsites.net/api/usuarios')
             .then((resposta) => {
                 if (resposta.status === 200) {
                     this.setState({ listaUsuarios: resposta.data });
@@ -61,7 +61,7 @@ export default class EditarDadosUsuario extends Component {
 
         if (parseJWT().jti !== 0) {
             fetch(
-                'http://localhost:5000/api/usuarios/' +
+                'https://back-door.azurewebsites.net/api/usuarios/' +
                 parseJWT().jti,
                 {
                     method: 'PUT',
@@ -95,7 +95,7 @@ export default class EditarDadosUsuario extends Component {
                 window.location.href = "/dadosusuarioadm";
 
         } else {
-            fetch('http://localhost:5000/api/usuarios', {
+            fetch('https://back-door.azurewebsites.net/api/usuarios', {
                 method: 'POST',
                 body: JSON.stringify({
                     idTipoUsuario: 1,
