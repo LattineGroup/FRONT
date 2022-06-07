@@ -20,7 +20,7 @@ export default class CadastroIpCli extends Component {
     }
 
     buscarIps = () => {
-        axios('http://localhost:5000/api/enderecoIps')
+        axios('https://back-door.azurewebsites.net/api/enderecoIps')
             .then((resposta) => {
                 if (resposta.status === 200) {
                     this.setState({ listaIps: resposta.data });
@@ -50,7 +50,7 @@ export default class CadastroIpCli extends Component {
         };
 
         axios
-            .post('http://localhost:5000/api/enderecoips', ip, {
+            .post('https://back-door.azurewebsites.net/api/enderecoips', ip, {
                 headers: {
                     Authorization: 'Bearer ' + localStorage.getItem('usuario-login'),
                 },
