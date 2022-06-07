@@ -23,7 +23,7 @@ export default class CadastroServicoAplicacionalCli extends Component {
     }
 
     buscarServicosAplicacionais = () => {
-        axios('http://localhost:5000/api/servicoaplicacionals')
+        axios('https://back-door.azurewebsites.net/api/servicoaplicacionals')
             .then((resposta) => {
                 if (resposta.status === 200) {
                     this.setState({ listaServicos: resposta.data });
