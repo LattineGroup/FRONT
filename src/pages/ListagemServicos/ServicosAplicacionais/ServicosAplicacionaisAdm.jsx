@@ -29,7 +29,7 @@ export default function ServicosAplicacionais() {
             <div className="conteudo">
                 <div className="container-conteudo-users">
                     <div className="container-titulo">
-                        <h1>Serviços Aplicacionais</h1>
+                        <h1>Serviço de Aplicativo</h1>
                     </div>
                     <div className="container-input">
                         <input type="text" placeholder="Buscar" />
