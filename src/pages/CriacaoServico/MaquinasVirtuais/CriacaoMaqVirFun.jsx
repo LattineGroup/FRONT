@@ -26,7 +26,7 @@ export default class CadastroMaqVirFun extends Component {
     }
 
     buscarUsuarios = () => {
-        axios('http://localhost:5000/api/usuarios')
+        axios('https://back-door.azurewebsites.net/api/usuarios')
             .then((resposta) => {
                 if (resposta.status === 200) {
                     this.setState({ listaUsuarios: resposta.data });
@@ -74,7 +74,7 @@ export default class CadastroMaqVirFun extends Component {
         };
 
         axios
-            .post('http://localhost:5000/api/maquinavirtuals', maquina, {
+            .post('https://back-door.azurewebsites.net/api/maquinavirtuals', maquina, {
                 headers: {
                     Authorization: 'Bearer ' + localStorage.getItem('usuario-login'),
                 },
