@@ -35,7 +35,7 @@ export default class CadastroServicoAplicacionalCli extends Component {
     };
 
     buscarServicosAplicacionais = () => {
-        axios('http://localhost:5000/api/servicoaplicacionals')
+        axios('https://back-door.azurewebsites.net/api/servicoaplicacionals')
             .then((resposta) => {
                 if (resposta.status === 200) {
                     this.setState({ listaServicos: resposta.data });
@@ -69,7 +69,7 @@ export default class CadastroServicoAplicacionalCli extends Component {
         };
 
         axios
-            .post('http://localhost:5000/api/servicoaplicacionals', servico, {
+            .post('https://back-door.azurewebsites.net/api/servicoaplicacionals', servico, {
                 headers: {
                     Authorization: 'Bearer ' + localStorage.getItem('usuario-login'),
                 },
