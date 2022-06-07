@@ -21,7 +21,7 @@ export default function DadosRedeVirtual() {
     }
 
     function buscarMinhasRedes() {
-        axios('https://door-back.azurewebsites.net/api/RedeVirtuals/minhas', {
+        axios('https://back-door.azurewebsites.net/api/RedeVirtuals/minhas', {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -36,7 +36,7 @@ export default function DadosRedeVirtual() {
     useEffect(buscarMinhasRedes, []);
 
     function buscarMeusDados() {
-        axios('https://door-back.azurewebsites.net/api/usuarios/meus', {
+        axios('https://back-door.azurewebsites.net/api/usuarios/meus', {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
