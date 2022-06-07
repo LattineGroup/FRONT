@@ -9,7 +9,7 @@ export default function DadosMaquina() {
     const { id } = useParams();
 
     function buscarMeusDados() {
-        axios('http://localhost:5000/api/MaquinaVirtuals/uma/'+id, {
+        axios('https://back-door.azurewebsites.net/api/MaquinaVirtuals/uma/'+id, {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
