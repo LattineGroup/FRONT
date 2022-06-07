@@ -11,7 +11,7 @@ export default function DadosUsuario() {
     const { id } = useParams();
 
     function buscarDadosUsuario() {
-        axios('http://localhost:5000/api/usuarios/um/'+id, {
+        axios('https://back-door.azurewebsites.net/api/usuarios/um/'+id, {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
