@@ -7,7 +7,7 @@ export default function DadosUsuario() {
     const [listaDadosUsuario, setListaDadosUsuario] = useState([]);
 
     function buscarMeusDados(){
-        axios('http://localhost:5000/api/usuarios/meus', {
+        axios('https://back-door.azurewebsites.net/api/usuarios/meus', {
             headers : {
                 'Authorization' : 'Bearer ' + localStorage.getItem('usuario-login')
             }
