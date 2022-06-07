@@ -10,7 +10,7 @@ export default function MaquinasVirtuais() {
     const [dataCadastro, setDataCadastro] = useState("");
 
     function buscarMaquinas() {
-        axios('https://door-back.azurewebsites.net/api/MaquinaVirtuals', {
+        axios('https://back-door.azurewebsites.net/api/MaquinaVirtuals', {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
