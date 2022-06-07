@@ -11,7 +11,7 @@ export default [
     [
         {
             id: 2,
-            title:"Conheça Serviços Aplicacionais",
+            title:"Conheça Serviço de Aplicativo",
             name:"O Serviço de Aplicativo do Azure é um serviço com base em HTTP para hospedagem de aplicativos Web, APIs REST e back-ends móveis. Você pode desenvolver usando sua linguagem favorita, seja .NET, .NET Core, Java, Ruby, Node.js, PHP ou Python. Os aplicativos são executados e escalados com facilidade em ambientes baseados no Windows e no Linux. O Serviço de Aplicativo não agrega apenas o poder do Microsoft Azure ao seu aplicativo, como segurança, balanceamento de carga, dimensionamento automático e gerenciamento automatizado. Você pode também aproveitar seus recursos de DevOps, como implantação contínua desde o Azure DevOps, GitHub, Docker Hub e outras fontes, gerenciamento de pacotes, ambientes de preparo, domínio personalizado e certificados TLS/SSL."
         }
     ],
