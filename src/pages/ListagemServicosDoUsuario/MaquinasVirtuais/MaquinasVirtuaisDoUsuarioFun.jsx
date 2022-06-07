@@ -33,7 +33,7 @@ export default function DadosServicos() {
     useEffect(buscarMaquinasUsuario, []);
 
     function buscarRedesUsuario() {
-        axios('https://door-back.azurewebsites.net/api/RedeVirtuals/user/'+id, {
+        axios('https://back-door.azurewebsites.net/api/RedeVirtuals/user/'+id, {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -48,7 +48,7 @@ export default function DadosServicos() {
     useEffect(buscarRedesUsuario, []);
 
     function buscarServicosUsuario() {
-        axios('https://door-back.azurewebsites.net/api/Servicoaplicacionals/user/'+id, {
+        axios('https://back-door.azurewebsites.net/api/Servicoaplicacionals/user/'+id, {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
