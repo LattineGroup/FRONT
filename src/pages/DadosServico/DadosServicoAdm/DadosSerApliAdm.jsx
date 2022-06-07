@@ -10,7 +10,7 @@ export default function DadosServico() {
     const { id } = useParams();
 
     function buscarMeusDados() {
-        axios('http://localhost:5000/api/ServicoAplicacionals/um/' + id, {
+        axios('https://back-door.azurewebsites.net/api/ServicoAplicacionals/um/' + id, {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
