@@ -9,7 +9,7 @@ export default function ServicosAplicacionais() {
     const [dataCadastro, setDataCadastro] = useState("");
 
     function buscarServicos() {
-        axios('https://door-back.azurewebsites.net/api/ServicoAplicacionals', {
+        axios('https://back-door.azurewebsites.net/api/ServicoAplicacionals', {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
