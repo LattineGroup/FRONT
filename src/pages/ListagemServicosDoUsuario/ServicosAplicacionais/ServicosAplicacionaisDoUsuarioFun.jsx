@@ -16,10 +16,10 @@ export default class Servicos extends Component {
                 <div className="conteudo">
                     <div className="container-conteudo-users">
                         <div className="container-titulo">
-                            <h1>Serviços Aplicacionais de "Nome do Usuário"</h1>
+                            <h1>Serviços Aplicacionais do usuário</h1>
                         </div>
                         <div className="container-input">
-                            <input type="text" placeholder="Buscar"/>
+                            <input type="text" placeholder="Buscar" />
                         </div>
                         <div className="listagem">
                             <div className="retangulo-usuario">

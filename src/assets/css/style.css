@@ -395,7 +395,7 @@ font-size: 24px;
     justify-content: center;
     align-items: center;
     border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     box-shadow: 6px 20px 20px 0px #00000040;
 }
 

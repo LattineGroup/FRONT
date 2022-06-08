@@ -56,14 +56,9 @@ export default function DadosMaquinaVirtual() {
             <Sidebar />
             <div className="conteudo">
                 <div className="container-conteudo-users">
-                    {
-                        listaDadosUsuario.map((usuario) => (
-                            <div key={usuario.idUsuario} className="container-titulo">
-                                <h1>Máquinas Virtuais de {usuario.nome}</h1>
+                            <div className="container-titulo">
+                                <h1>Máquinas Virtuais do usuário</h1>
                             </div>
-                        )
-                        )
-                    }
                     <div className="container-input">
                         <input type="text" placeholder="Buscar" />
                     </div>

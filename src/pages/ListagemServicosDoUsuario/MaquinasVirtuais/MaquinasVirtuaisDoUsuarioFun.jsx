@@ -18,7 +18,7 @@ export default function DadosServicos() {
     const { id } = useParams();
 
     function buscarMaquinasUsuario() {
-        axios('https://door-back.azurewebsites.net/api/MaquinaVirtuals/user/'+id, {
+        axios('https://door-back.azurewebsites.net/api/MaquinaVirtuals/user/' + id, {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -33,7 +33,7 @@ export default function DadosServicos() {
     useEffect(buscarMaquinasUsuario, []);
 
     function buscarRedesUsuario() {
-        axios('https://back-door.azurewebsites.net/api/RedeVirtuals/user/'+id, {
+        axios('https://back-door.azurewebsites.net/api/RedeVirtuals/user/' + id, {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -48,7 +48,7 @@ export default function DadosServicos() {
     useEffect(buscarRedesUsuario, []);
 
     function buscarServicosUsuario() {
-        axios('https://back-door.azurewebsites.net/api/Servicoaplicacionals/user/'+id, {
+        axios('https://back-door.azurewebsites.net/api/Servicoaplicacionals/user/' + id, {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -63,7 +63,7 @@ export default function DadosServicos() {
     useEffect(buscarServicosUsuario, []);
 
     function buscarDadosUsuario() {
-        axios('https://back-door.azurewebsites.net/api/usuarios/um/'+id, {
+        axios('https://back-door.azurewebsites.net/api/usuarios/um/' + id, {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -82,26 +82,21 @@ export default function DadosServicos() {
             <Sidebar />
             <div className="conteudo">
                 <div className="container-conteudo-users">
-                    {
-                        listaDadosUsuario.map((user) => (
-                            <div key={user.idUsuario} className="container-titulo">
-                                <h1>Serviços de {user.nome}</h1>
-                            </div>
-                        )
-                        )
-                    }
+                    <div className="container-titulo">
+                        <h1>Máquinas Virtuais do usuário</h1>
+                    </div>
                     <h2 className="titulo-outro">Máquinas Virtuais</h2>
                     <div className="listagem">
                         {
                             listaMaquinas.map((maquina) => (
                                 <div key={maquina.idMaquinaVirtual} className="retangulo-usuario">
-                                    <a href={"/dadosmaqvirFun/"+maquina.idMaquinaVirtual}>
+                                    <a href={"/dadosmaqvirFun/" + maquina.idMaquinaVirtual}>
                                         <h1>{maquina.nomeMaquinaVirtual}</h1>
                                         <h2>Data de Cadastro:</h2>
                                         <p>{Intl.DateTimeFormat({
                                             year: "numeric", month: "numeric", day: "numeric"
                                         }).format(new Date(maquina.dataCadastro))}</p>
-                                        </a>
+                                    </a>
                                 </div>
                             )
                             )
@@ -112,13 +107,13 @@ export default function DadosServicos() {
                         {
                             listaRedes.map((maquina) => (
                                 <div key={maquina.idRedeVirtual} className="retangulo-usuario">
-                                    <a href={"/dadosredevirtualFun/"+maquina.idRedeVirtual}>
+                                    <a href={"/dadosredevirtualFun/" + maquina.idRedeVirtual}>
                                         <h1>{maquina.nomeRedeVirtual}</h1>
                                         <h2>Data de Cadastro:</h2>
                                         <p>{Intl.DateTimeFormat({
                                             year: "numeric", month: "numeric", day: "numeric"
                                         }).format(new Date(maquina.dataCadastro))}</p>
-                                        </a>
+                                    </a>
                                 </div>
                             )
                             )
@@ -129,13 +124,13 @@ export default function DadosServicos() {
                         {
                             listaServicos.map((maquina) => (
                                 <div key={maquina.idServicoAplicacional} className="retangulo-usuario">
-                                    <a href={"/dadosserapliFun/"+maquina.idServicoAplicacional}>
+                                    <a href={"/dadosserapliFun/" + maquina.idServicoAplicacional}>
                                         <h1>{maquina.nomeServicoAplicacional}</h1>
                                         <h2>Data de Cadastro:</h2>
                                         <p>{Intl.DateTimeFormat({
                                             year: "numeric", month: "numeric", day: "numeric"
                                         }).format(new Date(maquina.dataCadastro))}</p>
-                                        </a>
+                                    </a>
                                 </div>
                             )
                             )

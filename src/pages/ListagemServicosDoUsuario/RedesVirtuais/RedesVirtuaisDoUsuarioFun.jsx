@@ -23,7 +23,7 @@ export default function DadosRedeVirtual() {
     const { id } = useParams();
 
     function buscarRedesUsuario() {
-        axios('https://back-door.azurewebsites.net/api/RedeVirtuals/user/'+id, {
+        axios('https://back-door.azurewebsites.net/api/RedeVirtuals/user/' + id, {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -38,7 +38,7 @@ export default function DadosRedeVirtual() {
     useEffect(buscarRedesUsuario, []);
 
     function buscarDadosUsuario() {
-        axios('https://back-door.azurewebsites.net/api/usuarios/um/'+id, {
+        axios('https://back-door.azurewebsites.net/api/usuarios/um/' + id, {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
@@ -57,14 +57,9 @@ export default function DadosRedeVirtual() {
             <Sidebar />
             <div className="conteudo">
                 <div className="container-conteudo-users">
-                    {
-                        listaDadosUsuario.map((usuario) => (
-                            <div key={usuario.idUsuario} className="container-titulo">
-                                <h1>Redes Virtuais de {usuario.nome}</h1>
-                            </div>
-                        )
-                        )
-                    }
+                    <div className="container-titulo">
+                        <h1>Redes Virtuais do usuário</h1>
+                    </div>
                     <div className="container-input">
                         <input type="text" placeholder="Buscar" />
                     </div>
