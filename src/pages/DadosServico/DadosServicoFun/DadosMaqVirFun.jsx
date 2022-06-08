@@ -9,7 +9,7 @@ export default function DadosMaquina() {
     const [listaDadosMaquina, setListaDadosMaquina] = useState([]);
     const { id } = useParams();
     const Excluir = (idMaquina) => {
-        axios.delete('http://localhost:5000/api/maquinavirtuals/Excluir/'+idMaquina)
+        axios.delete('https://back-door.azurewebsites.net/api/maquinavirtuals/Excluir/'+idMaquina)
         .then(() => {
           buscarMeusDados();
         })
@@ -19,7 +19,7 @@ export default function DadosMaquina() {
       }
 
     function buscarMeusDados() {
-        axios('http://localhost:5000/api/MaquinaVirtuals/uma/'+id, {
+        axios('https://back-door.azurewebsites.net/api/MaquinaVirtuals/uma/'+id, {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
