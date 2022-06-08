@@ -9,7 +9,7 @@ export default function DadosRede() {
     const [listaDadosRede, setListaDadosRede] = useState([]);
     const { id } = useParams();
     const Excluir = (idRede) => {
-        axios.delete('http://localhost:5000/api/Redevirtuals/Excluir/'+idRede)
+        axios.delete('https://back-door.azurewebsites.net/api/Redevirtuals/Excluir/'+idRede)
         .then(() => {
           buscarMeusDados();
         })
@@ -19,7 +19,7 @@ export default function DadosRede() {
       }
 
     function buscarMeusDados() {
-        axios('http://localhost:5000/api/redevirtuals/uma/'+id, {
+        axios('https://back-door.azurewebsites.net/api/redevirtuals/uma/'+id, {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
