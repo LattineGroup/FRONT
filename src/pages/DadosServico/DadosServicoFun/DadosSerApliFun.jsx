@@ -9,7 +9,7 @@ export default function DadosServico() {
     const [listaDadosServico, setListaDadosServico] = useState([]);
     const { id } = useParams();
     const Excluir = (idServico) => {
-        axios.delete('http://localhost:5000/api/ServicoAplicacionals/Excluir/'+idServico)
+        axios.delete('https://back-door.azurewebsites.net/api/ServicoAplicacionals/Excluir/'+idServico)
         .then(() => {
           buscarMeusDados();
         })
@@ -19,7 +19,7 @@ export default function DadosServico() {
       }
 
     function buscarMeusDados() {
-        axios('http://localhost:5000/api/Servicoaplicacionals/um/' + id, {
+        axios('https://back-door.azurewebsites.net/api/Servicoaplicacionals/um/' + id, {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
