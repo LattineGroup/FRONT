@@ -21,7 +21,7 @@ export default class Servicos extends Component {
 
                         <h2>Detalhes da Instância</h2>
                         <label for="nomeserapli">Nome do Serviço Aplicacional</label>
-                        <input className="input-text-edicao" id="nomeserapli" placeholder="Meu Serviço Aplicacional"></input>
+                        <input className="input-text-edicao" id="nomeserapli" placeholder="Meu Serviço de Aplicativo"></input>
 
                         <label for="runtime">Pilha de Runtime</label>
                         <select id="runtime">
